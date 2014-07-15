@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+
+
+<form action="upload_file.php" method="post"
+      enctype="multipart/form-data">
+    <label for="file">Filename:</label>
+    <input type="file" name="file" id="file"><br>
+    <input type="submit" name="submit" value="Submit">
+</form>
+
+
+<button type="button"  onclick="startRecord()">开始录音</button>
+<button type="button" onclick="stopRecord()">停止录音</button>
+<button type="button" onclick="startPlay()">播放声音</button>
+<button type="button" onclick="stopPlay()">停止播放</button>
+
+</body>
+</html>
+
+<script type="text/javascript">
+
+    function startRecord(){
+
+        console.log("startRecord");
+        Android.startRecord();
+    }
+    function stopRecord(){
+        console.log("stopRecord");
+        Android.stopRecord();
+    }
+
+    function startPlay(){
+        console.log("startPlay");
+        Android.startPlay();
+    }
+    function stopPlay(){
+        console.log("stopPlay");
+        Android.stopPlay();
+    }
+
+    function release(){
+        console.log("release");
+        Android.release();
+    }
+
+
+</script>
